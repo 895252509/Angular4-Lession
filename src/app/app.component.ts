@@ -16,3 +16,21 @@ export class AppComponent {
     ];
     myHero = this.heroes[0];
 }
+
+
+@Component({
+    selector: 'app-input',
+    template : `
+        <input (keyup)="onKey($event)" />
+        <p>{{values}}</p>
+    `,
+    //Url: './app.component.html',
+    styleUrls: ['./app.component.css']
+})
+export class InputComponent {
+    values = '';
+    onKey(e:any){
+        console.log(this);
+        this.values+= e.target.value+' | ';
+    }
+}
