@@ -1,30 +1,52 @@
 import { Component } from '@angular/core';
-import { Hero } from './app.component.model.hero';
+import { Hero } from './model.hero';
 
+/**
+ * 根组件
+ */
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+}
+
+/**
+ * 展示英雄  <<angular.cn>>=>显示数据&用户输入
+ * 
+ */
+@Component({
+    selector: 'com-TourOfHeroes',
+    templateUrl: './TourOfHeroes.template.html',
+    styleUrls: ['./app.component.css']
+})
+export class TourOfHeroes{
     title = 'Tour of Heroes';
     heroes = [
-        new Hero(1,'windstorm'),
-        new Hero(2,'Bombasto'),
-        new Hero(20,'Tornado'),
-        new Hero(11,'zx')
+        new Hero(1,'windstorm',''),
+        new Hero(2,'Bombasto',''),
+        new Hero(20,'Tornado',''),
+        new Hero(11,'zx','')
     ];
     myHero = this.heroes[0];
 
     addHero(v:string){
         if(v === null || v === '')
             return;
-        var newHero = new Hero(1,v);
+        let newHero = new Hero(1,v,'');
         this.heroes.push(newHero);
     }
 }
 
 
+
+
+
+/**
+ * 试验例程
+ */
 @Component({
     selector: 'app-input',
     template : `
@@ -43,8 +65,5 @@ export class InputComponent {
         this.values = v;
     }
     onKeyEnter(v:string){ this.value= this.values}
-    onBtnDown(v:string){ 
-        var newHero = new Hero(1,v);
-
-    }
+    onBtnDown(v:string){    }
 }
