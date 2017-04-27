@@ -16,6 +16,6 @@ import { AppComponent,InputComponent } from './app.component';
         HttpModule
     ],
     providers: [ ],
-    bootstrap: [ AppComponent,InputComponent ]
+    bootstrap: [ AppComponent ]
 })
 export class AppModule { }
