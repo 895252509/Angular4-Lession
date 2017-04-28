@@ -31,7 +31,7 @@ export class TourOfHeroes{
         new Hero(11,'zx','')
     ];
     myHero = this.heroes[0];
-
+ 
     addHero(v:string){
         if(v === null || v === '')
             return;
