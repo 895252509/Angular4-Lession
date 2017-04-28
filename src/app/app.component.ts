@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Hero } from './model.hero';
+import { Hero } from './Hero.model';
 
 /**
  * 根组件
