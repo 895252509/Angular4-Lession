@@ -5,18 +5,21 @@ import { HttpModule } from '@angular/http';
 
 import { AppComponent,TourOfHeroes } from './app.component';
 import { HeroFromComponent } from './HeroForm.component';
+import { InjectorDemoComponent } from "./InjectorDemo.component";
+import { LoggerService } from "./Logger.service";
 
 @NgModule({
     declarations: [
         AppComponent,
-        HeroFromComponent
+        HeroFromComponent,
+        InjectorDemoComponent
     ],
     imports: [
         BrowserModule,
         FormsModule,
         HttpModule
     ],
-    providers: [  ],
-    bootstrap: [ AppComponent ]
+    providers: [ LoggerService ],
+    bootstrap: [ AppComponent,InjectorDemoComponent ]
 })
 export class AppModule { }
