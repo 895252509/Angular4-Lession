@@ -11,6 +11,6 @@ export class HeroFromComponent{
     model = new Hero(18,'Dr IQ',this.powers[0],'chuck Overstreet');
     submitted = false;
     onSubmit(){ this.submitted = true; }
-    newHero(){ this.model = new Hero(42,'',''); }
+    newHero(){ this.model = new Hero(42,'','',''); }
     get diagnostic(){ return JSON.stringify(this.model)}
 }

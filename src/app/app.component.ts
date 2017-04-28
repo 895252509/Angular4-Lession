@@ -25,17 +25,17 @@ export class AppComponent {
 export class TourOfHeroes{
     title = 'Tour of Heroes';
     heroes = [
-        new Hero(1,'windstorm',''),
-        new Hero(2,'Bombasto',''),
-        new Hero(20,'Tornado',''),
-        new Hero(11,'zx','')
+        new Hero(1,'windstorm','',''),
+        new Hero(2,'Bombasto','',''),
+        new Hero(20,'Tornado','',''),
+        new Hero(11,'zx','','')
     ];
     myHero = this.heroes[0];
  
     addHero(v:string){
         if(v === null || v === '')
             return;
-        let newHero = new Hero(1,v,'');
+        let newHero = new Hero(1,v,'','');
         this.heroes.push(newHero);
     }
 }

@@ -23,6 +23,6 @@ export class InjectorDemoService {
 
     getHero(){
         this.logger.log('Getting hero ...'); 
-        return new Hero(222,'2','2');
+        return new Hero(222,'2','2','');
     }
 }
