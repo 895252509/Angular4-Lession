@@ -1,2 +1,5 @@
 <p>{{hero | json}}</p>
 <hr>
+<my-btn *ngFor="let ii of num" (ievent)="fevent($event)" [clickSize]="a">{{ii}}</my-btn><br>
+<!--// “ ” 此为模板语句，引用组件变量时需要以如下形式-->
+<p [pstr]="'一共点我'+a+'下！！！'">wwwwwww</p>

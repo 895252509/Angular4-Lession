@@ -1,4 +1,4 @@
-import { Component, OnInit, Optional } from '@angular/core';
+import { Component, OnInit, Optional,Input } from '@angular/core';
 
 import { InjectorDemoService } from "./InjectorDemo.service";
 import { Hero } from "./Hero.model";
@@ -28,6 +28,9 @@ import { injectorFactoryService,injectorHero } from "./InjectorFactory.service";
 })
 export class InjectorDemoComponent implements OnInit {
     hero:Hero = new Hero(0,'','');
+    num:Array<number> = [1,2,3];
+    a:number = -3;
+
     constructor(
         // 可选的注入，需要 @Optional 注解
         @Optional() private iservice:InjectorDemoService,
@@ -38,4 +41,8 @@ export class InjectorDemoComponent implements OnInit {
             this.hero = this.iservice.getHero();
         this.ifservice.out;
      }
+    fevent(s){
+        this.a++;
+        console.log(s);
+    }
 }
