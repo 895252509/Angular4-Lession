@@ -1,0 +1,24 @@
+<p>template-syntax-demo</p><br>
+<b>差值表达式：&lt;&lt;name + name&gt;&gt;</b>
+<p>{{name + name}}</p>
+<b>模板引用变量：</b><br>
+<input #heroInput (keyup)="0"/> {{heroInput.value}}
+<br>
+<b>ngFor：</b>
+<div *ngFor="let forvalue of arrname">{{forvalue}}</div><br>
+<button *ngFor="let hero of arrname" (click)="deleteHero(hero)">{{hero}}</button>
+
+<div (myClick)="clicked=$event" clickable>click me</div>
+
+<button [style.color]="'red'">123</button>
+
+<button [attr.aria-label]="'help'" (click)="changeColor()">点我改变样式</button>
+
+<div [class.special]="isSpecial">Special</div>
+
+<button class="btn" [class]="special">123</button>
+
+<input [value]="name"
+       (input)="name=$event.target.value" >
+
+
