@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component,OnInit } from '@angular/core';
+
 import { Hero } from './Hero.model';
+
 
 /**
  * 根组件
@@ -7,10 +9,13 @@ import { Hero } from './Hero.model';
 @Component({
     selector: 'app-root',
     templateUrl: './app.component.html',
-    styleUrls: ['./app.component.css']
+    styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-
+export class AppComponent implements OnInit{
+    title:string = 'Tour of Heroes';
+    constructor(){}
+    
+    ngOnInit(){}
 }
 
 /**
