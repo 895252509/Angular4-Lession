@@ -7,13 +7,13 @@ import { Component, OnInit ,EventEmitter, Input, Output} from '@angular/core';
 })
 export class MyBtnComponent implements OnInit {
     @Input() clickSize:number = 0;
-    @Output() ievent = new EventEmitter<string>();
-    
+    @Output() ievent = new EventEmitter<number>();
+    @Input() private groupIndex:number ;
+
     //ngClass 的用法
     iclass = {
         btn: true
-    }
-
+    };
 
     constructor() { }
 
@@ -24,17 +24,16 @@ export class MyBtnComponent implements OnInit {
 
     onclick(){
         this.clickSize++;
-        this.ievent.emit();
+        this.ievent.emit(this.groupIndex);
     }
 
     inc(){
         this.clickSize++;
-        this.ievent.emit('+');
+        this.ievent.emit(this.groupIndex);
     }
 
     dec(){
         this.clickSize--;
-        this.ievent.emit('-');
+        this.ievent.emit(this.groupIndex);
     }
-
 }

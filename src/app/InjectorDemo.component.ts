@@ -43,6 +43,6 @@ export class InjectorDemoComponent implements OnInit {
      }
     fevent(s){
         this.a++;
-        console.log(s);
+        this.num[s] ++;
     }
 }
