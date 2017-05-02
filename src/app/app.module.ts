@@ -4,6 +4,10 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 import { RouterModule } from "@angular/router";
 
+//模拟http服务
+import { InMemoryWebApiModule } from "angular-in-memory-web-api";
+import { InMemoryDataService }  from './in-memory-data.service';
+
 import { AppComponent,TourOfHeroes } from './app.component';
 import { HeroFromComponent } from './HeroForm.component';
 import { InjectorDemoComponent } from "./InjectorDemo.component";

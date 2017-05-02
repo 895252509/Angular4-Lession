@@ -5,9 +5,9 @@ import { HeroService } from "./Hero.service";
 import { Hero } from "./Hero.model";
 
 @Component({
-    selector: 'my-heroes',
-    templateUrl: 'Heroes.component.html',
-    styleUrls: ['./Heroes.component.css']
+  selector: 'my-heroes',
+  templateUrl: 'Heroes.component.html',
+  styleUrls: ['./Heroes.component.css']
 })
 export class HeroesComponent implements OnInit {
   heroes: Hero[];
@@ -26,5 +26,14 @@ export class HeroesComponent implements OnInit {
   }
   gotoDetail(): void {
     this.router.navigate(['/detail', this.selectedHero.id]);
+  }
+  add(name: string): void {
+    name = name.trim();
+    if (!name) { return; }
+    this.heroService.create(name)
+      .then(hero => {
+        this.heroes.push(hero);
+        this.selectedHero = null;
+      });
   }
 }
