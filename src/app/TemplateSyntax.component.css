@@ -1,0 +1,9 @@
+.special{
+    border: 2px solid red;
+    border-radius: 3px;
+    padding: 10px 20px;
+}
+
+.btn{
+    border: 3px solid gold;
+}
