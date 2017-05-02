@@ -5,6 +5,7 @@ import { HeroService } from "./Hero.service";
 import { Hero } from "./Hero.model";
 
 @Component({
+  moduleId: module.id,
   selector: 'my-heroes',
   templateUrl: 'Heroes.component.html',
   styleUrls: ['./Heroes.component.css']
@@ -34,6 +35,15 @@ export class HeroesComponent implements OnInit {
       .then(hero => {
         this.heroes.push(hero);
         this.selectedHero = null;
+      });
+  }
+
+  delete(hero: Hero): void {
+    this.heroService
+      .delete(hero.id)
+      .then(() => {
+        this.heroes = this.heroes.filter(h => h !== hero);
+        if (this.selectedHero === hero) { this.selectedHero = null; }
       });
   }
 }

@@ -8,6 +8,7 @@ import { HeroService } from "./Hero.service";
 import 'rxjs/add/operator/switchMap';
 
 @Component({
+    moduleId: module.id,
     selector: 'hero-detail',
     templateUrl: './HeroDetail.component.html',
     styleUrls:['./HeroDetail.component.css']

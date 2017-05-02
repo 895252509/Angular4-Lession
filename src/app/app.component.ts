@@ -7,6 +7,7 @@ import { Hero } from './Hero.model';
  * 根组件
  */
 @Component({
+    moduleId: module.id,
     selector: 'app-root',
     templateUrl: './app.component.html',
     styleUrls: ['./app.component.css'],

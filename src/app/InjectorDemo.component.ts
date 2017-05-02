@@ -13,6 +13,7 @@ import { injectorFactoryService,injectorHero } from "./InjectorFactory.service";
  * 
  */
 @Component({
+    moduleId: module.id,
     selector: 'injector-demo',
     templateUrl: 'InjectorDemo.component.html',
     providers:[ InjectorDemoService,LoggerService,NewLoggerService,InjectDepsService,Hero,
