@@ -13,7 +13,8 @@ export class HeroService {
 
     constructor(private http: Http) { }
 
-    getHeroes(): Promise<Hero[]> {
+    getHeroes(): Promise<Hero[]> {//debugger;
+        //this.http.post("http://localhost:8088/support/login",{ headers: this.headers });
         return this.http.get(this.heroesUrl)
             .toPromise()
             .then(response => response.json().data as Hero[])
