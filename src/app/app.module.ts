@@ -17,6 +17,7 @@ import { CoustomPComponent } from "./CoustomP.component";
 import { HeroDetailComponent } from "./HeroDetail.component";
 import { HeroesComponent } from "./Heroes.component";
 import { DashboardComponent } from "./Dashboard.component";
+import { HeroSearchComponent } from "./HeroSearch.component";
 
 import { LoggerService } from "./Logger.service";
 import { HeroService } from "./Hero.service";
@@ -34,7 +35,8 @@ import { AppRoutingModule } from "./app-routing.module";
         CoustomPComponent,
         HeroDetailComponent,
         HeroesComponent,
-        DashboardComponent
+        DashboardComponent,
+        HeroSearchComponent
     ],
     imports: [
         BrowserModule,
